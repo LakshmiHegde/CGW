@@ -3,7 +3,6 @@ services:
   springboot-app:
     container_name: spring_app_backend
     image: lakshmihegdeiiitb/gift_spring
-    build: .
     ports:
       - 9088:9087
     environment:
