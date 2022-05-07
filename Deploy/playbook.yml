@@ -7,7 +7,7 @@
       command: " docker rmi -f $(docker images -q) "
       command: " docker kill $(docker ps -q) "
     - name: Copy Docker compose file to destination
-        copy:
+        ansible.builtin.copy:
           src: ../
           dest: .
     - name: Docker compose up
