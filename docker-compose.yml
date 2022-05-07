@@ -5,6 +5,11 @@ services:
     image: lakshmihegdeiiitb/gift_spring
     ports:
       - 9088:9087
+    environment:
+      MYSQL_HOST: mysqldatabase
+      MYSQL_USER: lakshmi
+      MYSQL_PASSWORD: password
+      MYSQL_PORT: 3306
     volumes:
       - /home/lakshmi/Desktop/DB:/var/lib/mysql
     restart: always
