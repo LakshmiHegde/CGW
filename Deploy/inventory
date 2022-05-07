@@ -1,0 +1,8 @@
+---
+- name: Pull docker image
+  hosts: all
+  tasks:
+    - name: Pull image
+      docker_image:
+        name: lakshmihegdeiiitb/calculator_image
+        source: pull
