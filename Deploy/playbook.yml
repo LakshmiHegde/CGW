@@ -17,11 +17,6 @@
       copy:
           src: ../Dockerfile
           dest: .
-     
-    - name: Copy JAR file to destination
-      copy:
-          src: ../target/*.jar
-          dest: .
           
     - name: Execute docker compose
       docker_compose:
