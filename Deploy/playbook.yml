@@ -12,6 +12,11 @@
       copy:
           src: ../docker-compose.yml
           dest: .
+     
+    - name: Copy Docker file to destination
+      copy:
+          src: ../Dockerfile
+          dest: .
           
     - name: Execute docker compose
       docker_compose:
