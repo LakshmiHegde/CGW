@@ -7,14 +7,6 @@
         " docker rm $(docker ps -a -q) "
         " docker rmi -f $(docker images -q) "
         " docker kill $(docker ps -q) "
-    - name: Pull backend image
-      docker_image:
-        name: lakshmihegdeiiitb/gift_spring
-        source: pull
-    - name: Pull frontend image
-        docker_image:
-          name: lakshmihegdeiiitb/gift_react
-          source: pull
     - name: Copy Docker compose file to destination
         copy:
           src: ../
