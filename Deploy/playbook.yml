@@ -17,3 +17,8 @@
       docker_compose:
        project_src: .
        state: present
+      register: dockercompose
+     
+    - name: Container info
+      debug:
+        var: dockercompose
