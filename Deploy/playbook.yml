@@ -3,10 +3,9 @@
   hosts: all
   tasks:
     - name: Remove all images and containers
-      shell:
-        " docker rm $(docker ps -a -q) "
-        " docker rmi -f $(docker images -q) "
-        " docker kill $(docker ps -q) "
+      command: docker rm $(docker ps -a -q) 
+      command: docker rmi -f $(docker images -q)
+      command: docker kill $(docker ps -q)
     - name: Copy Docker compose file to destination
         copy:
           src: ../
